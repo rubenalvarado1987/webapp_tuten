@@ -1,0 +1,24 @@
+<div class="signin-content animated fadeIn">
+    <mat-card>
+        <mat-card-content>
+            <img src="../../../assets/img/1.png" width="200px">
+            <form [formGroup]="form" (ngSubmit)="onSubmit()">
+                <mat-form-field class="full-width-input">
+                    <input matInput placeholder="Email" formControlName="user_name" required>
+                    <mat-error *ngIf="isFieldInvalid('user_name')">
+                    Ingrese su email
+                    </mat-error>
+                </mat-form-field>
+
+                <mat-form-field class="full-width-input separate">
+                    <input matInput type="password" placeholder="Password" formControlName="password" required>
+                    <mat-error *ngIf="isFieldInvalid('user_name')">
+                    Ingrese su contraseña
+                    </mat-error>
+                </mat-form-field>
+
+                <button mat-raised-button color="primary" type="submit">Iniciar Sesión</button>
+            </form>
+        </mat-card-content>
+    </mat-card>
+</div>
